@@ -92,7 +92,10 @@ dependencies {
     //     exclude group: 'org.apache.hadoop', module: 'hadoop-core' //by both name and group
     // }
     // compile 'org.apache.hadoop:hadoop-core:1.2.1'
-    compile 'org.apache.kafka:kafka_2.10:0.8.1.1'
+//    compile 'org.apache.kafka:kafka_2.10:0.8.1.1'
+    // https://mvnrepository.com/artifact/org.apache.kafka/kafka_2.11
+    compile group: 'org.apache.kafka', name: 'kafka_2.11', version: '0.10.0.1'
+
 }
 
 // Embeded Jetty for testing

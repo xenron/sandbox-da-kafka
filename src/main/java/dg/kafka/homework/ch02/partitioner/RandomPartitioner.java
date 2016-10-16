@@ -1,4 +1,4 @@
-package dg.kafka.homework.ch02;
+package dg.kafka.homework.ch02.partitioner;
 
 import kafka.producer.Partitioner;
 import kafka.utils.VerifiableProperties;
@@ -28,20 +28,23 @@ public class RandomPartitioner implements Partitioner {
 //        }
 //    }
 
+    public RandomPartitioner(VerifiableProperties props) {
+
+    }
+
     @Override
     public int partition(Object o, int numPartitions) {
         String key = o.toString();
         //System.out.println("Fuck!!!!");
-        System.out.print("partitions number is "+numPartitions+"   ");
+        System.out.print("partitions number is " + numPartitions + "   ");
         if (key == null) {
             Random random = new Random();
             System.out.println("key is null ");
             return random.nextInt(numPartitions);
-        }
-        else {
-            int result = Math.abs(key.hashCode())%numPartitions; //很奇怪，
+        } else {
+            int result = Math.abs(key.hashCode()) % numPartitions; //很奇怪，
             //hashCode 会生成负数，奇葩，所以加绝对值
-            System.out.println("key is "+ key+ " partitions is "+ result);
+            System.out.println("key is " + key + " partitions is " + result);
             return result;
         }
     }

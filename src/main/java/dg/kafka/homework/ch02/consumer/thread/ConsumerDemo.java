@@ -1,4 +1,4 @@
-package dg.kafka.homework.ch02;
+package dg.kafka.homework.ch02.consumer.thread;
 
 import java.util.HashMap;
 import java.util.List;
@@ -16,7 +16,6 @@ import kafka.javaapi.consumer.ConsumerConnector;
  * 详细可以参考：https://cwiki.apache.org/confluence/display/KAFKA/Consumer+Group+Example
  *
  * @author xenron
- *
  */
 public class ConsumerDemo {
     private final ConsumerConnector consumer;
@@ -24,7 +23,7 @@ public class ConsumerDemo {
     private ExecutorService executor;
 
     public ConsumerDemo(String a_zookeeper, String a_groupId, String a_topic) {
-        consumer = Consumer.createJavaConsumerConnector(createConsumerConfig(a_zookeeper,a_groupId));
+        consumer = Consumer.createJavaConsumerConnector(createConsumerConfig(a_zookeeper, a_groupId));
         this.topic = a_topic;
     }
 
@@ -67,7 +66,8 @@ public class ConsumerDemo {
     }
 
     public static void main(String[] arg) {
-        String[] args = { "172.168.63.221:2188", "group-1", "page_visits", "12" };
+//        String[] args = { "172.168.63.221:2188", "group-1", "page_visits", "12" };
+        String[] args = {"127.0.0.1:2181", "group-1", "test1", "12"};
         String zooKeeper = args[0];
         String groupId = args[1];
         String topic = args[2];

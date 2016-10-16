@@ -1,4 +1,4 @@
-package dg.kafka.homework.ch02;
+package dg.kafka.homework.ch02.partitioner;
 
 import kafka.producer.Partitioner;
 import kafka.utils.VerifiableProperties;
@@ -12,12 +12,12 @@ public class PartitionerDemo implements Partitioner {
     public int partition(Object obj, int numPartitions) {
         int partition = 0;
         if (obj instanceof String) {
-            String key=(String)obj;
+            String key = (String) obj;
             int offset = key.lastIndexOf('.');
             if (offset > 0) {
                 partition = Integer.parseInt(key.substring(offset + 1)) % numPartitions;
             }
-        }else{
+        } else {
             partition = obj.toString().length() % numPartitions;
         }
 
