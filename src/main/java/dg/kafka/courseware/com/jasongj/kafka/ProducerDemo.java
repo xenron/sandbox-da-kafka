@@ -1,4 +1,4 @@
-package com.jasongj.kafka;
+package dg.kafka.courseware.com.jasongj.kafka;
 
 import java.util.Properties;
 
@@ -37,22 +37,22 @@ public class ProducerDemo {
 
   public static void sendOne(Producer<String, String> producer, String topic) throws InterruptedException {
 	boolean sleepFlag = false;
-    KeyedMessage<String, String> message1 = new KeyedMessage<String, String>(topic, "6", "test 0");
+    KeyedMessage<String, String> message1 = new KeyedMessage<String, String>(topic, "11", "test 11");
     producer.send(message1);
     if(sleepFlag) Thread.sleep(5000);
-    KeyedMessage<String, String> message2 = new KeyedMessage<String, String>(topic, "7", "test 1");
+    KeyedMessage<String, String> message2 = new KeyedMessage<String, String>(topic, "12", "test 12");
     producer.send(message2);
     if(sleepFlag) Thread.sleep(5000);
-    KeyedMessage<String, String> message3 = new KeyedMessage<String, String>(topic, "8", "test 2");
+    KeyedMessage<String, String> message3 = new KeyedMessage<String, String>(topic, "13", "test 13");
     producer.send(message3);
     if(sleepFlag) Thread.sleep(5000);
-    KeyedMessage<String, String> message4 = new KeyedMessage<String, String>(topic, "9", "test 3");
+    KeyedMessage<String, String> message4 = new KeyedMessage<String, String>(topic, "14", "test 14");
     producer.send(message4);
     if(sleepFlag) Thread.sleep(5000);
-    KeyedMessage<String, String> message5 = new KeyedMessage<String, String>(topic, "10", "test 4");
+    KeyedMessage<String, String> message5 = new KeyedMessage<String, String>(topic, "15", "test 15");
     producer.send(message5);
     if(sleepFlag) Thread.sleep(5000);
-    KeyedMessage<String, String> message6 = new KeyedMessage<String, String>(topic, "11", "test 4");
+    KeyedMessage<String, String> message6 = new KeyedMessage<String, String>(topic, "16", "test 16");
     producer.send(message6);
     if(sleepFlag) Thread.sleep(5000);
     producer.close();

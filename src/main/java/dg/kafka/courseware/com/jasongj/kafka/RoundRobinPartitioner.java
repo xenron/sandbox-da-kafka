@@ -1,4 +1,4 @@
-package com.jasongj.kafka;
+package dg.kafka.courseware.com.jasongj.kafka;
 
 import java.util.concurrent.atomic.AtomicLong;
 

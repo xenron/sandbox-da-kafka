@@ -1,4 +1,4 @@
-package com.jasongj.kafka;
+package dg.kafka.courseware.com.jasongj.kafka;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

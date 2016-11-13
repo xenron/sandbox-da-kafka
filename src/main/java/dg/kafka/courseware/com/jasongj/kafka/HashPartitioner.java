@@ -1,4 +1,4 @@
-package com.jasongj.kafka;
+package dg.kafka.courseware.com.jasongj.kafka;
 
 import kafka.producer.Partitioner;
 import kafka.utils.VerifiableProperties;

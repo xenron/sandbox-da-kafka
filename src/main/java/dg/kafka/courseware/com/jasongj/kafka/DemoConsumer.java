@@ -1,4 +1,4 @@
-package com.jasongj.kafka;
+package dg.kafka.courseware.com.jasongj.kafka;
 
 import java.util.HashMap;
 import java.util.List;
@@ -15,15 +15,19 @@ import kafka.message.MessageAndMetadata;
 public class DemoConsumer {
 
 	public static void main(String[] args) {
-		//args = new String[] { "zookeeper0:2181/kafka", "topic1", "group1", "consumer1" };
-		if (args == null || args.length != 4) {
-			System.err.println("Usage:\n\tjava -jar kafka_consumer.jar ${zookeeper_list} ${topic_name} ${group_name} ${consumer_id}");
-			System.exit(1);
-		}
+
+		args = new String[] { "zookeeper0:2181/kafka", "topic1", "group1", "consumer3" };
+
+//		if (args == null || args.length != 4) {
+//			System.err.println("Usage:\n\tjava -jar kafka_consumer.jar ${zookeeper_list} ${topic_name} ${group_name} ${consumer_id}");
+//			System.exit(1);
+//		}
+
 		String zk = args[0];
 		String topic = args[1];
 		String groupid = args[2];
 		String consumerid = args[3];
+
 		Properties props = new Properties();
 		props.put("zookeeper.connect", zk);
 		props.put("group.id", groupid);
