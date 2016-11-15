@@ -12,7 +12,7 @@ targetCompatibility = 1.8
 
 compileJava.options.encoding = 'UTF-8'
 compileScala.options.encoding = 'UTF-8'
-compileScala.scalaCompileOptions.useAnt = false
+// compileScala.scalaCompileOptions.useAnt = false
 
 ext {
   scalaVersion = "2.11"
