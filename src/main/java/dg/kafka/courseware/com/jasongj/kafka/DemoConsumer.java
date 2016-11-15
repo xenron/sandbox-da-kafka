@@ -16,12 +16,12 @@ public class DemoConsumer {
 
 	public static void main(String[] args) {
 
-		args = new String[] { "zookeeper0:2181/kafka", "topic1", "group1", "consumer3" };
+		// args = new String[] { "zookeeper0:2181/kafka", "topic1", "group1", "consumer3" };
 
-//		if (args == null || args.length != 4) {
-//			System.err.println("Usage:\n\tjava -jar kafka_consumer.jar ${zookeeper_list} ${topic_name} ${group_name} ${consumer_id}");
-//			System.exit(1);
-//		}
+		if (args == null || args.length != 4) {
+			System.err.println("Usage:\n\tjava -jar kafka_consumer.jar ${zookeeper_list} ${topic_name} ${group_name} ${consumer_id}");
+			System.exit(1);
+		}
 
 		String zk = args[0];
 		String topic = args[1];
