@@ -124,7 +124,10 @@
 							<appendAssemblyId>false</appendAssemblyId>
 							<archive>
 								<manifest>
-									<mainClass>dg.kafka.courseware.com.jasongj.kafka.DemoConsumer</mainClass>
+									<mainClass>dg.kafka.courseware.com.jasongj.kafka.ConsumerDemo</mainClass>
+									<!--
+									<mainClass>dg.kafka.courseware.com.jasongj.kafka.ProducerDemo</mainClass>
+									-->
 								</manifest>
 							</archive>
 							<descriptorRefs>

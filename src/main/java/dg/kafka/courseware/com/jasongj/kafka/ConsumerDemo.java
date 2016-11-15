@@ -12,7 +12,7 @@ import kafka.consumer.KafkaStream;
 import kafka.javaapi.consumer.ConsumerConnector;
 import kafka.message.MessageAndMetadata;
 
-public class DemoConsumer {
+public class ConsumerDemo {
 
 	public static void main(String[] args) {
 
